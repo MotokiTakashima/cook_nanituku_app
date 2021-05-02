@@ -37,3 +37,13 @@ div.field_with_errors {
 body {
   padding-top: 46px;
 }
+
+// テーブル
+th,
+td {
+  vertical-align: model !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
