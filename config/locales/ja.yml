@@ -6,6 +6,7 @@ ja:
     attributes:
       post:
         title: 料理名
+        recipe: レシピ
         content: 作り方
     errors:
       messages:
