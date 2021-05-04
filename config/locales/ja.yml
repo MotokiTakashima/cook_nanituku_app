@@ -5,8 +5,8 @@ ja:
       post: メッセージ
     attributes:
       post:
-        title: タイトル
-        content: 内容
+        title: 料理名
+        content: 作り方
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
