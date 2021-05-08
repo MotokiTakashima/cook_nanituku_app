@@ -27,6 +27,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# ログイン機能
+gem 'devise'
+# 多言語対応(Rails 6の場合)
+gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
 
 group :development, :test do
