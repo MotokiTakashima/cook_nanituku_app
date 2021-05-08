@@ -8,6 +8,7 @@ ja:
         title: 料理名
         recipe: レシピ
         content: 作り方
+        user: ユーザー
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
