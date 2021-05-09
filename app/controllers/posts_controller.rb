@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
-    @posts = Post.includes(:user).order(:created_at)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.includes(:user).order(:created_at)
   end
 
   def show
