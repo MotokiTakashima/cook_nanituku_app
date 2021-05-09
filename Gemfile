@@ -32,6 +32,8 @@ gem 'devise'
 # 多言語対応(Rails 6の場合)
 gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
+# 検索機能
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
