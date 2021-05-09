@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
-    @posts = Post.order(id: :asc)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.includes(:user).order(:created_at)
   end
 
   def show
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.create!(post_params)
     if @post.save
       redirect_to @post, notice: "投稿しました"
     else
@@ -47,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :recipe)
   end
 end

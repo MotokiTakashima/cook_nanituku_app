@@ -1,12 +1,14 @@
 ---
 ja:
   activerecord:
-    model:
+    models:
       post: メッセージ
     attributes:
       post:
-        title: タイトル
-        content: 内容
+        title: 料理名
+        recipe: 材料
+        content: 作り方
+        user: ユーザー
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
